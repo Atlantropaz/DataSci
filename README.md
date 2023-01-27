@@ -15,7 +15,7 @@ Bitcoin sentiment consists of two metrics from Bitcoin's perpetual contracts
 - Open Interest 
 - Funding Rate 
 
-## TL;DR
+## Summary
 Amongst 34 features including Sentiment, Liquidity and other attributes, XGBoost found 7 important ones 
 which I will group them into three cateogries
 - Traditional Attributes
@@ -34,7 +34,9 @@ it seems that sentiment metrics and traditional metrics are in comparison more i
 After training several machine learning models, I found that a stacking ensemble model consist of **XGboost**, **Random Forest** and **Decision Tree** 
 (all with fine-tuned hyper-params) achieves the highest **accuracy socre** of **0.97** 
 and **second-lowest** of Mean Squared Error and Mean Absolute Error next to Decision Tree Model. 
+<br> 
 
+However, I'd like to point out that even though accuracy score is relatively high, average MAE of the stacking model using a walk-forward validation is about **635**, or equivalent to **2-4%** of price fluctuation for the testing set. Such models could have further rooms of improvement to decrease the MAE loss. 
 
 
 
